@@ -9,7 +9,8 @@ body{
     height: 800;
     /* border: 1px solid #e0e0e0; */
     /* border-radius: 24px; */
-    overflow: hidden;
+    overflow: auto;
+
 }
 
 .icon-wrapper{
@@ -30,9 +31,11 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 12px 24px;
-    background-color: #055F55;
+    background-color: #008069;
     color: #fff;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 .status-bar .text-wrap{
     font-size: 14px;
@@ -43,7 +46,7 @@ body{
 }
 
 .whatsapp-ui header{
-    background-color: #055F55;
+    background-color: #008069;
 }
 
 .whatsapp-ui .header-item-icon img{
@@ -72,6 +75,9 @@ font-weight: 500;
     display: grid;
     grid-template-columns: 48px 1fr 1fr 1fr;
     position: relative;
+    background-color: #008069;
+    position: sticky;
+    top: 45px;
     
 }
 
@@ -82,6 +88,7 @@ font-weight: 500;
     align-items: center;
     height: 48px;
     transition: color .3s linear;
+    cursor: pointer;
 }
 
 .whatsapp-ui .tab-item svg path{
@@ -121,12 +128,96 @@ font-weight: 500;
     left: 0;
 }
 
-
 .whatsapp-ui .tab.three::after {
     width: 104px;
     left: 152px;
 }
+
 .whatsapp-ui .tab.four::after {
     width: 104px;
     left: 256px;
+}
+
+.chat-avatar-wrap img{
+    min-width: 50px;
+    max-width: 50px;
+    border-radius: 50%;
+}
+
+.chat-list-item{
+    gap: 12px;
+    cursor: pointer;
+}
+
+.chat-info-title{
+    font-size: 15px;
+    color: #131A20;
+}
+
+.chat-info-wrap p{
+    font-size: 14px;
+    color: #69767E;
+}
+
+.chat-info-wrap {
+    width: fill-available;
+    width: -webkit-fill-available;
+}
+
+.chat-list-item{
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+}
+
+span.chat-list-timestamp{
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 11px;
+    color: #69767E;
+}
+
+.chat-list-item-counter {
+    height: 22px;
+    width: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    background-color: #26D367;
+    font-size: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding-right: 1.5px;
+}
+
+.chat-list-item.has-unread .chat-list-timestamp{
+    color: #389C60;
+}
+
+.chat-info-excerpt p {
+    font-size: 14px;
+    color: #69767E;
+    width: 252px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.chat-list-item.has-unread .chat-info-excerpt p{
+    padding-right: 8px;
+}
+
+.double-check{
+    width: 20px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+    margin-right: 2px;
+}
+
+.inline-chat-icon{
+    vertical-align: middle;
+    height: 20px;
+    margin-bottom: 3px;
 }
